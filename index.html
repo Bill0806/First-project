@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+            .header {
+                font-weight: 400;
+                /* 文字粗細 */
+                position: relative;
+                /* 定位 */
+                z-index: 5000;
+                /* Z 方向位置，z-index 數字越大的在越上面，反之則在越下面。 */
+                background-color:#fff;
+                /* 背景顏色 */
+                height: 54px;
+                /* DIV高度設定*/
+            }
+            .header-logo {
+                position: absolute;
+                top: 0;
+                left:40%;
+                right:40%;
+                margin: 0 80px;
+                /* div 邊界間距 */
+            }
+            .header-element {
+            position: relative;
+            z-index: 5001;
+            }
+            .header-btn {
+            display: inline-block;
+            /* 類似float 但不需要做clear = http://zh-tw.learnlayout.com/inline-block.html
+            可以設定width 與 height、margin 屬性 */
+            line-height: 50px;
+            vertical-align: top;
+            /* 讓圖片靠上對齊 */
+            padding: 0 5px;
+            /* 控制區域如 DIV 或 span 的內部距離，也可以控制 HTML 的表格內部距離（例如文字或圖片與邊框的距離）
+            ，padding 本身就是內距的設定，padding 是不可以設定負值 */
+            cursor: pointer;
+            /* 改變滑鼠游標 */
+            }
+            .background {
+            width: 100%;
+            height:500px;
+            background-size: cover;
+            background-position: center;
+            background-image: url(https://dgo9uctxwg500.cloudfront.net/images/2334x980/2019_index_banner_menberday_back_f9d00273ab.png);
+            }
+            .sc-eh {
+            position: relative;
+            overflow: hidden;
+            /* 内容修剪，並且内容不可见，须有一个指定的高度（height或者max-height）
+            或者将white-space设置为nowra，*/
+            max-width: 1200px;
+            margin-left: 315px;
+            padding-bottom: 30px;
+            /* https://www.1keydata.com/css-tutorial/tw//padding.php
+            可以設定留白，分別為長度、百分比、以及 'auto */
+            }
+            .sc-eh1 {
+                padding-left:90px;
+                margin-bottom: 20px;
+            }
+            .sc-eh1-1 {
+                display: inline-block;
+                width: 220px;
+                height: 320px;
+                margin: 1em;
+                box-shadow: 0px 6px 6px 0px #eee;
+            }
+            .sc-eh1-1-1{
+                display: inline-block;
+                overflow: hidden
+                max-width: 300px;
+                
+            }
+            .tile-img {
+            padding: 0 10px;
+            width:200px ;
+            background-size: cover;
+            background-position: center;
+            background-color: #fff;
+            }
+            .tile-subtitle {
+            font-size: 14px;
+            color:rgb(66, 62, 62);
+            }
+            .tile-fans {
+            font-size: 6px;
+            color:gray;
+            }
+            .tile-info {
+            -webkit-box-sizing: border-box;
+             box-sizing: border-box;
+             background-color: #fff;
+             padding: 10px 6px 6px;
+              height: 90px;
+            }
+            .fDkSBO {
+            font-weight: 500;
+            font-size: 18px;
+            padding: 3px 0 3px 16px;
+            margin-bottom: 18px;
+            color: #666;
+            border-top: 1px solid #666;
+            border-bottom: 1px solid #666;
+            /* border-style：邊框樣式
+            top: 上框線 bottom: 下框線 left: 左框線 right: 右框線 border: 四邊框線
+            width: 邊線的寬度 color：邊線的顏色 */
+            text-align: left;
+            display: none;
+            }
+            .tildh {
+            
+            padding: 2px ;
+            text-align:center;
+            margin-bottom: 15px;
+            font-size: 20px;
+            color:gray;
+            }
+            .efyHwW {
+            position: relative;
+            overflow: hidden;
+            max-width: 960px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            padding: 20px;
+            margin: 0 auto 20px;
+            text-align: center
+            }
+            .knJikE {
+            font-size: 18px;
+            }
+            .dBDqHS {
+            padding: 0 25px 25px;
+            }
+            .edsQPR {
+            margin-bottom: 8px;
+            line-height: 1.6;
+            }
+            .jWHloL {
+            font-size: 18px;
+            }
+            .bvqFEX {
+            background: url(https://d1gpbxqmt7wq2i.cloudfront.net/asset/mobile/images/pattern_bg.png),#fcdcd5;
+            height: 80px;
+            font-size: 18px;
+            padding: 25px 15px;
+            text-align: center;
+            }
+            .tile-text {
+            font-size: 20px;
+            color: #f04e2f;
+            margin-bottom: 15px;
+            }
+            .tile-text02 {
+            display: inline-block;
+            color: #ffffff;
+            background-color: #f04e2f;
+            padding: 8px 50px;
+            border-radius: 30px;
+            cursor: pointer;
+            }
+            .footer {
+             height: 250px;
+             background-color: #333;
+             color: #999;
+             font-size: 14px;
+             overflow: hidden;
+             max-height: 500px;
+            }
+            
+            .footer-wrapper {
+            position: relative;
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 15px;
+            }
+            .footer-nav {
+            display: block;
+            }
+            .lang-selector-wrap {
+            float: right;
+            width: 180px;
+            }
+            
+            .lang-selector {
+            -webkit-appearance: none;
+            border: 0;
+            border-radius: 0;
+            padding: 10px 24px 10px 44px;
+            background-color: transparent;
+            color: inherit;
+            font-size: 16px;
+            line-height: 18px;
+            outline: none;
+            width: 100%;
+            cursor: pointer;
+            }
+            option {
+            font-weight: normal;
+            display: block;
+            white-space: pre;
+            min-height: 1.2em;
+            padding: 0px 2px 1px;
+            }
+            .footer-navlist {
+            text-align: left;
+            }
+            .footer-navlist li {
+            display: inline-block;
+            }
+            .navlink {
+            display: inline-block;
+            padding: 10px 8px;
+            color: #fff;
+            line-height: 20px;
+            }
+            .footer-content {
+            text-align: center;
+            line-height: 2;
+            border-top: 1px solid #666666;
+            padding-top: 20px;
+            }
+            .social-panel {
+            margin: 20px 0;
+            }
+    </style>
+
+</head>
+
+<body>
+<div class="header">
+        <div class="header-logo">
+        <a href="https://tw.eztable.com/">
+                <img src="https://d1gpbxqmt7wq2i.cloudfront.net/asset/mobile/images/logo/header_logo.png"width="200">
+        </a>
+        </div>
+        <div class="header-element">
+            <a href="https://tw.eztable.com/search">
+            <div class="header-btn">
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </div>
+            <div class="header-btn search-bar">
+                <span>想訂哪一間餐廳？</span>
+            </div>
+            </a>
+        </div>
+</div>
+<div class="background">
+
+</div>
+</div>
+<div class="sc-eh">
+        <h1 class="tildh">主題分類</h1>
+            <div class="sc-eh1">
+                <div class="sc-eh1-1">
+                        <a target href=https://tw.eztable.com/channel-list/331?from_ern=channel_list%2F13&from_type=channel_list>
+                            </a>
+                        <div class="sc-eh1-1-1">
+                            <div class="tile-img">
+                                <img src="https://images.unsplash.com/photo-1556742205-e10c9486e506?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q="width="200"height="220">
+                            </div>
+                            <div class="tile-info">
+                                <p class="tile-subtitle">10 月全台最新餐廳
+                                </p>
+                                <span class="tile-fans">397 位粉絲</span>
+                                
+                            </div>
+                        </div>
+                </div>
+                <div class="sc-eh1-1">
+                        <a target href=https://tw.eztable.com/channel-list/331?from_ern=channel_list%2F13&from_type=channel_list>
+                            </a>
+                        <div class="sc-eh1-1-1">
+                            <div class="tile-img">
+                                <img src="https://images.unsplash.com/photo-1556742205-e10c9486e506?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q="width="200"height="220">
+                            </div>
+                            <div class="tile-info">
+                                <p class="tile-subtitle">10 月全台最新餐廳
+                                </p>
+                                <span class="tile-fans">397 位粉絲</span>
+                                
+                            </div>
+                        </div>
+                </div>
+                <div class="sc-eh1-1">
+                        <a target href=https://tw.eztable.com/channel-list/331?from_ern=channel_list%2F13&from_type=channel_list>
+                            </a>
+                        <div class="sc-eh1-1-1">
+                            <div class="tile-img">
+                                <img src="https://images.unsplash.com/photo-1556742205-e10c9486e506?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q="width="200"height="220">
+                            </div>
+                            <div class="tile-info">
+                                <p class="tile-subtitle">10 月全台最新餐廳
+                                </p>
+                                <span class="tile-fans">397 位粉絲</span>
+                                
+                            </div>
+                        </div>
+                </div>
+                <div class="sc-eh1-1">
+                        <a target href=https://tw.eztable.com/channel-list/331?from_ern=channel_list%2F13&from_type=channel_list>
+                            </a>
+                        <div class="sc-eh1-1-1">
+                            <div class="tile-img">
+                                <img src="https://images.unsplash.com/photo-1556742205-e10c9486e506?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q="width="200"height="220">
+                            </div>
+                            <div class="tile-info">
+                                <p class="tile-subtitle">10 月全台最新餐廳
+                                </p>
+                                <span class="tile-fans">397 位粉絲</span>
+                                
+                            </div>
+                        </div>
+                </div>
+            </div>
+        <h1 class="tildh">精選餐廳</h1>
+            <div class="sc-eh1">
+                <div class="sc-eh1-1">
+                        <a target href=https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60>
+                            </a>
+                        <div class="sc-eh1-1-1">
+                            <div class="tile-img">
+                                <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"width="200"height="220>
+                            </div>
+                            <div class="tile-info">
+                                <p class="tile-subtitle">10 月全台最新餐廳
+                                </p>
+                                <span class="tile-fans">397 位粉絲</span>
+                                
+                            </div>
+                        </div>
+
+                </div>
+                <div class="sc-eh1-1">
+                        <a target href=https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60>
+                            </a>
+                        <div class="sc-eh1-1-1">
+                            <div class="tile-img">
+                                <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"width="200"height="220>
+                            </div>
+                            <div class="tile-info">
+                                <p class="tile-subtitle">10 月全台最新餐廳
+                                </p>
+                                <span class="tile-fans">397 位粉絲</span>
+                                
+                            </div>
+                        </div>
+                        
+                </div>
+                <div class="sc-eh1-1">
+                        <a target href=https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60>
+                            </a>
+                        <div class="sc-eh1-1-1">
+                            <div class="tile-img">
+                                <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"width="200"height="220>
+                            </div>
+                            <div class="tile-info">
+                                <p class="tile-subtitle">10 月全台最新餐廳
+                                </p>
+                                <span class="tile-fans">397 位粉絲</span>
+                                
+                            </div>
+                        </div>
+                        
+                </div>
+                <div class="sc-eh1-1">
+                        <a target href=https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60>
+                            </a>
+                        <div class="sc-eh1-1-1">
+                            <div class="tile-img">
+                                <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"width="200"height="220>
+                            </div>
+                            <div class="tile-info">
+                                <p class="tile-subtitle">10 月全台最新餐廳
+                                </p>
+                                <span class="tile-fans">397 位粉絲</span>
+                                
+                            </div>
+                        </div>
+                        
+                </div>
+            </div>
+        <h1 class="tildh">獨家優惠</h1>
+        <div class="sc-eh1">
+                <div class="sc-eh1-1">
+                        <a target href=https://tw.eztable.com/channel-list/331?from_ern=channel_list%2F13&from_type=channel_list>
+                            </a>
+                        <div class="sc-eh1-1-1">
+                            <div class="tile-img">
+                                <img src="https://images.unsplash.com/photo-1533808235766-376cdc7e7661?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"width="200"height="220>
+                            </div>
+                            <div class="tile-info">
+                                <p class="tile-subtitle">10 月全台最新餐廳
+                                </p>
+                                <span class="tile-fans">397 位粉絲</span>
+                                
+                            </div>
+                        </div>
+                </div>
+                <div class="sc-eh1-1">
+                        <a target href=https://tw.eztable.com/channel-list/331?from_ern=channel_list%2F13&from_type=channel_list>
+                            </a>
+                        <div class="sc-eh1-1-1">
+                            <div class="tile-img">
+                                <img src="https://images.unsplash.com/photo-1533808235766-376cdc7e7661?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"width="200"height="220>
+                            </div>
+                            <div class="tile-info">
+                                <p class="tile-subtitle">10 月全台最新餐廳
+                                </p>
+                                <span class="tile-fans">397 位粉絲</span>
+                                
+                            </div>
+                        </div>
+                </div>
+                <div class="sc-eh1-1">
+                        <a target href=https://tw.eztable.com/channel-list/331?from_ern=channel_list%2F13&from_type=channel_list>
+                            </a>
+                        <div class="sc-eh1-1-1">
+                            <div class="tile-img">
+                                <img src="https://images.unsplash.com/photo-1533808235766-376cdc7e7661?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"width="200"height="220>
+                            </div>
+                            <div class="tile-info">
+                                <p class="tile-subtitle">10 月全台最新餐廳
+                                </p>
+                                <span class="tile-fans">397 位粉絲</span>
+                                
+                            </div>
+                        </div>
+                </div>
+                <div class="sc-eh1-1">
+                        <a target href=https://tw.eztable.com/channel-list/331?from_ern=channel_list%2F13&from_type=channel_list>
+                            </a>
+                        <div class="sc-eh1-1-1">
+                            <div class="tile-img">
+                                <img src="https://images.unsplash.com/photo-1533808235766-376cdc7e7661?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"width="200"height="220>
+                            </div>
+                            <div class="tile-info">
+                                <p class="tile-subtitle">10 月全台最新餐廳
+                                </p>
+                                <span class="tile-fans">397 位粉絲</span>
+                                
+                            </div>
+                        </div>
+                </div>
+            </div>
+        <h1 class="tildh">EZTABLE</h1>
+        <div class="sc-eh1">
+                <div class="sc-eh1-1">
+                        <a target href=https://tw.eztable.com/channel-list/331?from_ern=channel_list%2F13&from_type=channel_list>
+                            </a>
+                        <div class="sc-eh1-1-1">
+                            <div class="tile-img">
+                                <img src="https://dgo9uctxwg500.cloudfront.net/images/480x480%23/zh_TW_7465ffd37d.png"width="200">
+                            </div>
+                            <div class="tile-info">
+                                <p class="tile-subtitle">10 月全台最新餐廳
+                                </p>
+                                <span class="tile-fans">397 位粉絲</span>
+                                
+                            </div>
+                        </div>
+                </div>
+                <div class="sc-eh1-1">
+                        <a target href=https://tw.eztable.com/channel-list/331?from_ern=channel_list%2F13&from_type=channel_list>
+                            </a>
+                        <div class="sc-eh1-1-1">
+                            <div class="tile-img">
+                                <img src="https://dgo9uctxwg500.cloudfront.net/images/480x480%23/zh_TW_7465ffd37d.png"width="200">
+                            </div>
+                            <div class="tile-info">
+                                <p class="tile-subtitle">10 月全台最新餐廳
+                                </p>
+                                <span class="tile-fans">397 位粉絲</span>
+                                
+                            </div>
+                        </div>
+                </div>
+                <div class="sc-eh1-1">
+                        <a target href=https://tw.eztable.com/channel-list/331?from_ern=channel_list%2F13&from_type=channel_list>
+                            </a>
+                        <div class="sc-eh1-1-1">
+                            <div class="tile-img">
+                                <img src="https://dgo9uctxwg500.cloudfront.net/images/480x480%23/zh_TW_7465ffd37d.png"width="200">
+                            </div>
+                            <div class="tile-info">
+                                <p class="tile-subtitle">10 月全台最新餐廳
+                                </p>
+                                <span class="tile-fans">397 位粉絲</span>
+                                
+                            </div>
+                        </div>
+                </div>
+                <div class="sc-eh1-1">
+                        <a target href=https://tw.eztable.com/channel-list/331?from_ern=channel_list%2F13&from_type=channel_list>
+                            </a>
+                        <div class="sc-eh1-1-1">
+                            <div class="tile-img">
+                                <img src="https://dgo9uctxwg500.cloudfront.net/images/480x480%23/zh_TW_7465ffd37d.png"width="200">
+                            </div>
+                            <div class="tile-info">
+                                <p class="tile-subtitle">10 月全台最新餐廳
+                                </p>
+                                <span class="tile-fans">397 位粉絲</span>
+                                
+                            </div>
+                        </div>
+                </div>
+
+            </div>
+</div>
+
+
+
+<div class="efyHwW";>
+    <div class="knJikE">
+        <div class="dBDqHS">
+            <p class="edsQPR">
+                <span class=".jWHloL"style="color:rgb(255, 0, 0)">
+                    27,244,708
+                </span>
+                人透過我們訂位，分享了
+                <span class=".jWHloL"style="color:rgb(255, 0, 0)">
+                        455,806
+                </span>
+                則評論，全亞洲共有
+                <span class=".jWHloL" style="color: rgb(255, 0, 0)">
+                        7,804
+                </span>
+                家精選餐廳任你挑選
+            </p>
+                哈囉！想查看你目前有多少 EZCASH？
+                <a href="https://tw.eztable.com/">立即登入</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="bvqFEX">
+    
+        <div class="tile-text" color="#f04e2f">沒有你想要的餐廳頻道嗎？</div>
+        <a class="tile-text02" href="https://docs.google.com/forms/d/e/1FAIpQLSdfqbLhl9EIOR-mjyg-keMgjKnqhObC8xc3dQLWqPUJrqUy0Q/viewform" target="_blank">請給我們最直接的意見</a>
+</div>
+<div class="footer">
+   
+        <footer class="footer-wrapper">
+            <div class="footer-nav">
+                <label class="lang-selector-wrap">
+                        <i class="fa fa-globe" aria-hidden="true"></i>
+                        <select class="lang-selector">
+                            
+                            <option selected="" value="zh_TW">繁體中文</option>
+                            <option value="en_US">English</option>
+                            <option value="th_TH">ภาษาไทย</option>
+                        </select>
+                    </label>
+                    <nav>
+                        <ul class="footer-navlist">
+                            <li><a class="navlink" href="https://tw.eztable.com/about">關於</a></li>
+                            <li><a class="navlink" href="https://tw.eztable.com/career">人才招募</a></li>
+                            <li><a class="navlink" target="_blank" href="http://blog.eztable.com">EZTABLE Blog</a>
+                            </li><li><a class="navlink" href="https://tw.eztable.com/terms">服務條款</a></li>
+                            <li><a class="navlink" href="https://tw.eztable.com/privacy">隱私權政策</a></li>
+                            <li><a class="navlink" target="_blank" href="https://docs.google.com/a/eztable.com/forms/d/e/1FAIpQLScaNU2K8iNg_loJfi7H1SvMbzier-ob39MfTncuAVzxYqT4HA/viewform">餐廳合作</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            <div class="footer-content">
+                <div>台北市信義區基隆路一段178號5樓</div>
+                <div>taiwan@eztable.com</div>
+                <div>週一至週四 10:00 至 19:00，週五 10：00 至 18：00（例假日及國定假日除外）</div>
+                    <div class="social-panel">
+                    <a href="https://www.facebook.com/eztablefan" target="_blank" class="social-link">
+                    <img width="40" height="40" src="https://d1gpbxqmt7wq2i.cloudfront.net/asset/mobile/images/icons/smedia-facebook.png"></a>
+                    <a href="https://www.instagram.com/eztable.tw/" target="_blank" class="social-link">
+                    <img width="40" height="40" src="https://d1gpbxqmt7wq2i.cloudfront.net/asset/mobile/images/icons/smedia-instagram.png"></a>
+                    <a href="https://www.youtube.com/user/eztabletw" target="_blank" class="social-link">
+                    <img width="40" height="40" src="https://d1gpbxqmt7wq2i.cloudfront.net/asset/mobile/images/icons/smedia-youtube.png"></a>
+                    <a href="https://twitter.com/BookEZTABLE" target="_blank" class="social-link">
+                    <img width="40" height="40" src="https://d1gpbxqmt7wq2i.cloudfront.net/asset/mobile/images/icons/smedia-twitter.png"></a>
+                    </div>
+            </div>
+        </footer>
+    </div>
+    </body>
+</html>
