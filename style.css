@@ -15,12 +15,15 @@
     top: 0;
     left:40%;
     right:40%;
-    margin: 0 80px;
+    margin:0 auto;
     /* div 邊界間距 */
+    text-align:  center;
+    
 }
 .header-element {
 position: relative;
 z-index: 5001;
+margin:0 auto;
 }
 .header-btn {
 display: inline-block;
@@ -41,6 +44,8 @@ height:500px;
 background-size: cover;
 background-position: center;
 background-image: url(https://dgo9uctxwg500.cloudfront.net/images/2334x980/2019_index_banner_menberday_back_f9d00273ab.png);
+margin: 0 auto;
+text-align:  center;
 }
 
 .dYkNeS {
@@ -84,7 +89,8 @@ margin-top: 50px;
 background-color: #ffffff;
 width:410px;
 height: 330px;
-margin-left:739px
+
+margin: 0 auto;ㄋ
 }
 .pig{
     height:100px ;
@@ -111,6 +117,7 @@ overflow: hidden;
 或者将white-space设置为nowra，*/
 max-width: 1200px;
 margin-left: 315px;
+margin: 0 auto;
 padding-bottom: 30px;
 /* https://www.1keydata.com/css-tutorial/tw//padding.php
 可以設定留白，分別為長度、百分比、以及 'auto */
@@ -251,10 +258,10 @@ color:gray;
 }
 .tile-info {
 -webkit-box-sizing: border-box;
- box-sizing: border-box;
- background-color: #fff;
- padding: 10px 6px 6px;
-  height: 90px;
+box-sizing: border-box;
+background-color: #fff;
+padding: 10px 6px 6px;
+height: 90px;
 }
 .fDkSBO {
 font-weight: 500;
@@ -354,13 +361,13 @@ border-radius: 30px;
 cursor: pointer;
 }
 .footer {
- height: 250px;
- background: url(https://d1gpbxqmt7wq2i.cloudfront.net/asset/mobile/images/pattern_bg.png), #333;
- color: #999;
- font-size: 14px;
- overflow: hidden;
- max-height: 500px;
- opacity: 1.95;
+height: 250px;
+background: url(https://d1gpbxqmt7wq2i.cloudfront.net/asset/mobile/images/pattern_bg.png), #333;
+color: #999;
+font-size: 14px;
+overflow: hidden;
+max-height: 500px;
+opacity: 1.95;
 }
 
 .footer-wrapper {
