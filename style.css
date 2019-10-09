@@ -85,17 +85,17 @@ border-bottom: solid 1px #c1c0c1;
 cursor: pointer;
 margin-top: 50px;
 }
-.jWvGNy {
+.Search {
 background-color: #ffffff;
 width:410px;
 height: 330px;
 
-margin: 0 auto;ㄋ
+margin: 0 auto;
 }
 .pig{
     height:100px ;
     width: 300px;  
-    color: #4A90E2;
+    color: #ffff;
     margin-left:50px;
     padding-top:250px;
 }
@@ -149,13 +149,13 @@ overflow-y: hidden;
 margin-bottom: 50px;
 text-align: center;
 }
-.hSNUMP {
+.favorableform {
 margin-top:15px;
 margin-bottom: 25px;
 margin-left:75px;
 overflow-y:auto;
 }
-.dXZViI {
+.favorable {
 border-bottom: 1px solid #eee;
 padding-bottom: 10px;
 float:left;
@@ -285,7 +285,7 @@ margin-bottom: 15px;
 font-size: 20px;
 color:gray;
 }
-.efyHwW {
+.textform01 {
 position: relative;
 overflow: hidden;
 max-width: 960px;
@@ -297,13 +297,13 @@ padding: 20px;
 margin: 0 auto 20px;
 text-align: center
 }
-.knJikE {
+.textform02 {
 font-size: 18px;
 }
-.dBDqHS {
+.textform03 {
 padding: 0 25px 25px;
 }
-.edsQPR {
+.textform04 {
 margin-bottom: 8px;
 line-height: 1.6;
 }
@@ -340,7 +340,7 @@ font-weight: 300;
 .jWHloL {
 font-size: 18px;
 }
-.bvqFEX {
+.opinion {
 background: url(https://d1gpbxqmt7wq2i.cloudfront.net/asset/mobile/images/pattern_bg.png),#f0beb2;
 height: 80px;
 font-size: 18px;
