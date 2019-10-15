@@ -48,7 +48,7 @@ margin: 0 auto;
 text-align:  center;
 }
 
-.dYkNeS {
+.Restaurantsearch {
 margin: 0 auto;
 max-width: 410px;
 width: 100%;
@@ -56,14 +56,15 @@ margin-right: auto;
 padding: 0;
 
 }   
-.ioyCcs {
+.searchframe {
 display: -webkit-box;
 display: -webkit-flex;
 display: -ms-flexbox;
 display: flex;
 
 }
-.dCFvjw {
+
+.search {
 flex: 1;
 padding: 14px 0;
 line-height: 22px;
@@ -74,32 +75,21 @@ border-bottom: solid 1px #c1c0c1;
 cursor: pointer;
 margin-top: 50px;
 }
-.ezDsyh {
-flex: 1;
-padding: 14px 0;
-line-height: 22px;
-text-align: center;
-background-color: #ffffff;
-color: #000000;
-border-bottom: solid 1px #c1c0c1;
-cursor: pointer;
-margin-top: 50px;
-}
-.Search {
+.backgroundsearch {
 background-color: #ffffff;
 width:410px;
 height: 330px;
 
-margin: 0 auto;
+margin: 0 auto;ㄋ
 }
 .pig{
     height:100px ;
     width: 300px;  
-    color: #ffff;
+    color: #4A90E2;
     margin-left:50px;
     padding-top:250px;
 }
-.kpnSKI {
+.searchbutton {
 background-color: #f04e2f;
 border-radius: 4px;
 /* 使四周圓角化 */
@@ -140,22 +130,14 @@ padding-bottom: 30px;
     max-width: 300px;
     
 }
-.ctiUpw {
-width: 100%;
-white-space: nowrap;
-overflow-x: auto;
-overflow-y: hidden;
--webkit-overflow-scrolling: touch;
-margin-bottom: 50px;
-text-align: center;
-}
-.favorableform {
+
+.Discount {
 margin-top:15px;
 margin-bottom: 25px;
 margin-left:75px;
 overflow-y:auto;
 }
-.favorable {
+.dXZViI {
 border-bottom: 1px solid #eee;
 padding-bottom: 10px;
 float:left;
@@ -285,7 +267,7 @@ margin-bottom: 15px;
 font-size: 20px;
 color:gray;
 }
-.textform01 {
+.efyHwW {
 position: relative;
 overflow: hidden;
 max-width: 960px;
@@ -297,13 +279,13 @@ padding: 20px;
 margin: 0 auto 20px;
 text-align: center
 }
-.textform02 {
+.knJikE {
 font-size: 18px;
 }
-.textform03 {
+.dBDqHS {
 padding: 0 25px 25px;
 }
-.textform04 {
+.edsQPR {
 margin-bottom: 8px;
 line-height: 1.6;
 }
@@ -340,7 +322,7 @@ font-weight: 300;
 .jWHloL {
 font-size: 18px;
 }
-.opinion {
+.bvqFEX {
 background: url(https://d1gpbxqmt7wq2i.cloudfront.net/asset/mobile/images/pattern_bg.png),#f0beb2;
 height: 80px;
 font-size: 18px;
